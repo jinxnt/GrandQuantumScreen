@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Аренда премиальных телевизоров Samsung, LG 85-98 дюймов в Екатеринбурге. Профессиональная установка для мероприятий, свадеб, конференций.">
+    <meta name="keywords" content="аренда телевизора, аренда ТВ, аренда телевизора Екатеринбург, большой телевизор на мероприятие, аренда Samsung, аренда LG">
+    <title>Grand Quantum Screen — Аренда премиальных телевизоров в Екатеринбурге</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📺</text></svg>">
+    <style>
+        /* ==========================================================================
+           CSS VARIABLES & RESET
+           ========================================================================== */
+        :root {
+            --bg-dark: #0A0D12;
+            --bg-card: #141922;
+            --bg-footer: #05070A;
+            --accent-blue: #00B4D8;
+            --accent-emerald: #00CC99;
+            --text-primary: #F8F9FA;
+            --text-secondary: #9CA3AF;
+            --text-muted: #6B7280;
+            
+            --font-display: 'Manrope', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ==========================================================================
+           TYPOGRAPHY
+           ========================================================================== */
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            letter-spacing: -0.01em;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .text-accent {
+            color: var(--accent-blue);
+        }
+
+        /* ==========================================================================
+           UTILITY CLASSES
+           ========================================================================== */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 6rem 0;
+        }
+
+        .text-center { text-align: center; }
+        .flex-center { display: flex; align-items: center; justify-content: center; }
+
+        /* ==========================================================================
+           NAVIGATION
+           ========================================================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 0;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            background: rgba(10, 13, 18, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 1rem 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-blue);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-blue);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; box-shadow: 0 0 10px var(--accent-blue); }
+            50% { opacity: 0.7; box-shadow: 0 0 20px var(--accent-blue); }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .nav-cta {
+            padding: 0.75rem 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-cta:hover {
+            border-color: var(--accent-blue);
+            background: rgba(0, 180, 216, 0.1);
+        }
+
+        /* ==========================================================================
+           BUTTONS
+           ========================================================================== */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2.5rem;
+            background: transparent;
+            border: 1px solid var(--accent-blue);
+            border-radius: 50px;
+            color: var(--accent-blue);
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 180, 216, 0.2), transparent);
+            transition: var(--transition-smooth);
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-blue);
+            color: var(--bg-dark);
+            box-shadow: 0 0 40px rgba(0, 180, 216, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-accent {
+            padding: 1.25rem 3rem;
+            background: var(--accent-blue);
+            border: none;
+            border-radius: 50px;
+            color: var(--bg-dark);
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition-bounce);
+        }
+
+        .btn-accent:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 60px rgba(0, 180, 216, 0.5);
+        }
+
+        /* ==========================================================================
+           HERO SECTION
+           ========================================================================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(135deg, rgba(10, 13, 18, 0.95) 0%, rgba(10, 13, 18, 0.8) 100%),
+                url('https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 60%;
+            background: radial-gradient(ellipse at center, rgba(0, 180, 216, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 6rem 0;
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #FFFFFF 0%, #94A3B8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 600px;
+        }
+
+        /* ==========================================================================
+           ABOUT SECTION
+           ========================================================================== */
+        .about {
+            background: var(--bg-dark);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .about-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            pointer-events: none;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        /* ==========================================================================
+           EQUIPMENT SECTION
+           ========================================================================== */
+        .equipment {
+            background: var(--bg-card);
+        }
+
+        .equipment-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .equipment-card {
+            background: var(--bg-dark);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .equipment-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 20px 40px rgba(0, 180, 216, 0.1);
+        }
+
+        .equipment-card h3 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .equipment-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .equipment-list li {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .equipment-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+        }
+
+        /* ==========================================================================
+           SOLUTIONS SECTION
+           ========================================================================== */
+        .solutions {
+            background: var(--bg-dark);
+        }
+
+        .solutions-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .solution-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .solution-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+            filter: grayscale(30%) brightness(0.8);
+        }
+
+        .solution-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 40%, rgba(10, 13, 18, 0.95) 100%);
+            z-index: 1;
+        }
+
+        .solution-card:hover img {
+            filter: grayscale(0%) brightness(1);
+            transform: scale(1.05);
+        }
+
+        .solution-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            z-index: 2;
+        }
+
+        .solution-card h3 {
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .solution-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .solution-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid transparent;
+            border-radius: 20px;
+            transition: var(--transition-smooth);
+        }
+
+        .solution-card:hover::after {
+            border-color: var(--accent-blue);
+            box-shadow: inset 0 0 30px rgba(0, 180, 216, 0.1);
+        }
+
+        /* ==========================================================================
+           ADVANTAGES SECTION
+           ========================================================================== */
+        .advantages {
+            background: var(--bg-card);
+        }
+
+        .advantages-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .advantage-card {
+            background: var(--bg-dark);
+            border-radius: 24px;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--accent-blue);
+        }
+
+        .advantage-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: rgba(0, 180, 216, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .advantage-card h3 {
+            color: var(--text-primary);
+        }
+
+        .advantage-card p {
+            font-size: 1rem;
+        }
+
+        .advantage-bg {
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 180, 216, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* ==========================================================================
+           STEPS SECTION
+           ========================================================================== */
+        .steps {
+            background: var(--bg-dark);
+        }
+
+        .steps-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 2px solid var(--accent-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+            margin: 0 auto 1.5rem;
+            transition: var(--transition-smooth);
+        }
+
+        .step-card:hover .step-number {
+            background: var(--accent-blue);
+            color: var(--bg-dark);
+            box-shadow: 0 0 30px rgba(0, 180, 216, 0.4);
+        }
+
+        .step-card h3 {
+            color: var(--text-primary);
+        }
+
+        .step-card p {
+            max-width: 280px;
+            margin: 0 auto;
+        }
+
+        .step-line {
+            position: absolute;
+            top: 3.5rem;
+            left: 60%;
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(90deg, var(--accent-blue) 0%, transparent 100%);
+            opacity: 0.3;
+        }
+
+        .step-card:last-child .step-line {
+            display: none;
+        }
+
+        /* ==========================================================================
+           CTA SECTION
+           ========================================================================== */
+        .cta {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-bg {
+            position: absolute;
+            inset: 0;
+            background: 
+                linear-gradient(180deg, rgba(10, 13, 18, 0.7) 0%, rgba(10, 13, 18, 0.85) 100%),
+                url('https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .cta-content {
+            text-align: center;
+            max-width: 700px;
+            padding: 2rem;
+        }
+
+        .cta h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* ==========================================================================
+           FOOTER
+           ========================================================================== */
+        .footer {
+            background: var(--bg-footer);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            max-width: 280px;
+        }
+
+        .footer-contacts {
+            text-align: center;
+        }
+
+        .footer-contacts a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-contacts a:hover {
+            color: var(--accent-blue);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+        }
+
+        .social-link {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .social-link:hover {
+            background: var(--accent-blue);
+            color: var(--bg-dark);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* ==========================================================================
+           RESPONSIVE
+           ========================================================================== */
+        @media (max-width: 1024px) {
+            .about-grid,
+            .advantages-grid,
+            .solutions-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step-line {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+
+            .section {
+                padding: 4rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="#" class="logo">
+                    GRAND QUANTUM<span class="logo-dot"></span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#equipment">Оборудование</a></li>
+                    <li><a href="#solutions">Решения</a></li>
+                    <li><a href="#advantages">Преимущества</a></li>
+                    <li><a href="#steps">Как мы работаем</a></li>
+                </ul>
+                <a href="tel:+79935001838" class="nav-cta">📞 +7 (993) 500-18-38</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-glow"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Аренда премиальных телевизоров в Екатеринбурге</h1>
+                <p class="hero-subtitle">Профессиональная аренда телевизоров 85-98" для мероприятий. Samsung QLED, OLED 4K. Доставка, установка, настройка.</p>
+                <a href="tel:+79935001838" class="btn-primary">
+                    📞 Позвонить сейчас
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Аренда телевизоров от 85 дюймов</h2>
+                    <p><strong>Grand Quantum Screen</strong> — профессиональная аренда премиальных телевизоров в Екатеринбурге. Мы специализируемся на предоставлении телевизоров большого формата (85", 98") для мероприятий любого масштаба.</p>
+                    <p>Предлагаем только флагманские модели Samsung и LG последнего поколения с технологиями QLED, OLED, 4K разрешением и smart-функциями. Каждое устройство проходит предварительную проверку и профессиональную калибровку.</p>
+                    <p>Работаем с 2018 года, обслужили более 500 мероприятий в Екатеринбурге и области.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800&q=80" alt="Профессиональная установка телевизора">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Section -->
+    <section class="section equipment" id="equipment">
+        <div class="container">
+            <div class="equipment-header">
+                <h2>Наше оборудование</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto;">Только премиальные модели с гарантией качества</p>
+            </div>
+            <div class="equipment-grid">
+                <div class="equipment-card">
+                    <h3>Samsung QLED 85" / 98"</h3>
+                    <p>Технология Quantum Dot для идеальной цветопередачи, HDR10+, 4K UHD</p>
+                    <ul class="equipment-list">
+                        <li>Разрешение 3840×2160</li>
+                        <li>Частота 120 Гц</li>
+                        <li>Smart TV (Tizen)</li>
+                        <li>Поддержка HDR10+</li>
+                        <li>Антибликовое покрытие</li>
+                    </ul>
+                </div>
+                <div class="equipment-card">
+                    <h3>LG OLED 83"</h3>
+                    <p>Идеальный черный цвет, бесконечная контрастность, технология α9 Gen6</p>
+                    <ul class="equipment-list">
+                        <li>Разрешение 4K</li>
+                        <li>Частота 120 Гц</li>
+                        <li>Smart TV (webOS)</li>
+                        <li>Dolby Vision IQ</li>
+                        <li>Поддержка Apple AirPlay</li>
+                    </ul>
+                </div>
+                <div class="equipment-card">
+                    <h3>Дополнительное оборудование</h3>
+                    <p>Все необходимое для комфортного использования</p>
+                    <ul class="equipment-list">
+                        <li>Крепления на стену/стойку</li>
+                        <li>Медиаплееры (Apple TV, Android TV)</li>
+                        <li>Звуковые системы</li>
+                        <li>Кабели HDMI 2.1</li>
+                        <li>Пульты управления</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="section solutions" id="solutions">
+        <div class="container">
+            <div class="solutions-header">
+                <h2>Для каких мероприятий подходит</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto;">Арендуйте телевизор для любого события</p>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0202128?w=800&q=80" alt="Свадьбы и праздники">
+                    <div class="solution-content">
+                        <h3>Свадьбы и юбилеи</h3>
+                        <p>Показ фотографий, видеопоздравлений, трансляция церемонии</p>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80" alt="Бизнес-мероприятия">
+                    <div class="solution-content">
+                        <h3>Бизнес-конференции</h3>
+                        <p>Презентации, видеоконференции, показ статистики</p>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <img src="https://images.unsplash.com/photo-1517924233926-b0117d09723d?w=800&q=80" alt="Публичные показы">
+                    <div class="solution-content">
+                        <h3>Спортивные мероприятия</h3>
+                        <p>Трансляции матчей, спортивные события, финалы</p>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80" alt="Киновечера">
+                    <div class="solution-content">
+                        <h3>Киновечера и показы</h3>
+                        <p>Домашний кинотеатр, премьеры, тематические вечера</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="section advantages" id="advantages">
+        <div class="container">
+            <div class="advantages-header">
+                <h2>Почему выбирают нас</h2>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-bg"></div>
+                    <div class="advantage-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00B4D8" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Премиальное оборудование</h3>
+                    <p>Только Samsung QLED и LG OLED последних моделей. Все телевизоры проходят проверку перед выдачей.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-bg"></div>
+                    <div class="advantage-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00B4D8" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>Полный сервис "под ключ"</h3>
+                    <p>Доставка, профессиональная установка, настройка изображения, демонтаж. Работаем в белых перчатках.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-bg"></div>
+                    <div class="advantage-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00B4D8" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Страхование и безопасность</h3>
+                    <p>Все оборудование застраховано. Несем полную ответственность за технику во время мероприятия.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-bg"></div>
+                    <div class="advantage-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00B4D8" stroke-width="2">
+                            <path d="M20 12V7H4v5h16zm0-8H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3>Гибкие условия аренды</h3>
+                    <p>Аренда от 1 дня. Скидки на длительный срок. Возможность доставки в пригороды Екатеринбурга.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="section steps" id="steps">
+        <div class="container">
+            <div class="steps-header">
+                <h2>Как заказать аренду телевизора</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto;">Всего 3 простых шага</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Звонок или заявка</h3>
+                    <p>Свяжитесь с нами по телефону или оставьте заявку. Уточните дату, место и тип мероприятия.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Подбор оборудования</h3>
+                    <p>Мы поможем выбрать оптимальную модель и комплектацию под ваши задачи и бюджет.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Доставка и установка</h3>
+                    <p>В назначенный день привезем, установим и настроим оборудование. После мероприятия демонтируем.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="cta">
+        <div class="cta-bg"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Нужен телевизор на мероприятие?</h2>
+                <p>Позвоните прямо сейчас и получите консультацию по выбору модели и расчет стоимости</p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <a href="tel:+79935001838" class="btn-accent">📞 Позвонить</a>
+                    <a href="https://wa.me/79935001838" target="_blank" class="btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        Написать в WhatsApp
+                    </a>
+                </div>
+                <p style="margin-top: 2rem; font-size: 1rem; color: var(--text-secondary);">
+                    📍 Работаем в Екатеринбурге и области<br>
+                    ⏰ Ежедневно с 9:00 до 21:00
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        GRAND QUANTUM<span class="logo-dot"></span>
+                    </a>
+                    <p>Аренда премиальных телевизоров Samsung и LG в Екатеринбурге. Профессиональная установка для мероприятий.</p>
+                </div>
+                <div class="footer-contacts">
+                    <h3 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1.1rem;">Контакты</h3>
+                    <a href="tel:+79935001838" style="font-size: 1.2rem; font-weight: 600; color: var(--accent-blue);">+7 (993) 500-18-38</a>
+                    <a href="mailto:Arkadii.92@mail.ru" style="margin: 0.5rem 0; display: block;">Arkadii.92@mail.ru</a>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">Екатеринбург и область<br>Доставка в течение 2-4 часов</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://wa.me/79935001838" class="social-link" target="_blank" title="WhatsApp">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </a>
+                    <a href="https://t.me/+79935001838" class="social-link" target="_blank" title="Telegram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                        </svg>
+                    </a>
+                    <a href="viber://chat?number=+79935001838" class="social-link" title="Viber">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Grand Quantum Screen. Аренда телевизоров в Екатеринбурге.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Click tracking for phone calls
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                // Здесь можно добавить Яндекс.Метрику или Google Analytics
+                console.log('Call made to:', this.getAttribute('href'));
+            });
+        });
+
+        // Mobile menu (простая версия)
+        const navbar = document.getElementById('navbar');
+        const logo = document.querySelector('.logo');
+        
+        logo.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                const navLinks = document.querySelector('.nav-links');
+                if (navLinks.style.display === 'flex') {
+                    navLinks.style.display = 'none';
+                } else {
+                    navLinks.style.display = 'flex';
+                    navLinks.style.flexDirection = 'column';
+                    navLinks.style.position = 'absolute';
+                    navLinks.style.top = '100%';
+                    navLinks.style.left = '0';
+                    navLinks.style.right = '0';
+                    navLinks.style.background = 'var(--bg-dark)';
+                    navLinks.style.padding = '2rem';
+                    navLinks.style.gap = '1.5rem';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
